@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+docker exec -it algorand /algorand/node/algoh "$@" -d /algorand/node/algoh
