@@ -29,7 +29,7 @@ To obtain node status using `docker exec`
 docker exec algorand /algorand/node/goal node status -d /algorand/node/data
 ```
 
-Alternatively copy the contents of [bin](./bin) to `/usr/bin`, you can now run Algorand cli tools from the host against the Docker container using `docker exec`
+Alternatively on your server copy the contents of [bin](./bin) to `/usr/bin`, you can now run Algorand cli tools from the host against the Docker container using `docker exec`
 
 ```
 goal node status
