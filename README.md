@@ -17,7 +17,7 @@ docker run -d -p 8080:8080 --name algorand blockzilla/algorand-node
 
 To run a specific version:
 
-docker run -d -p 8080:8080 --name algorand blockzilla/algorand-node:1.0.29
+docker run -d -p 8080:8080 --name algorand blockzilla/algorand-node:v1.0.29
 
 
 To run on testnet:
