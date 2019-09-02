@@ -3,7 +3,6 @@
 Run Algorand in a Docker container
 
 
-
 ### Build
 
 ```
@@ -11,14 +10,24 @@ docker build -t algorand .
 ```
 
 ### Running
-
+Default network is `mainnet`
 
 ```
-docker run -d -p 8080:8080 --name algorand bjweaver/algorand-node
+docker run -d -p 8080:8080 --name algorand blockzilla/algorand-node
+
+To run a specific version:
+
+docker run -d -p 8080:8080 --name algorand blockzilla/algorand-node:release-1.29.0
+
 
 To run on testnet:
 
-docker run -d -p 8080:8080 --name algorand bjweaver/algorand-node:testnet
+docker run -d -p 8080:8080 -e NETWORK=testnet --name algorand blockzilla/algorand-node
+
+
+To run on devnet:
+
+docker run -d -p 8080:8080 -e NETWORK=devnet --name algorand blockzilla/algorand-node
 ```
 
 ### Status
@@ -41,4 +50,14 @@ API will listen on localhost:8080
 
 ```
 curl 127.0.0.1:8080/swagger.json
+```
+
+
+# Donation
+Credit to https://github.com/bjweaver/ for initial Docker file
+
+Thanks
+
+```
+YGC67NIYZUPZCF3E6HTGIM2CZR7IIQUMFN4CIO77QYCGGBVZBAL3P4BTRQ
 ```
